@@ -1,25 +1,24 @@
 #include<stdlib.h>
 #include<stdio.h>
-#define MAX 10
+
+#define SIZE 4
+void show(int arr[]);
 
 int main(void){
-    int score[MAX];
-    int i=0,num;
-    int sum=0;
-    printf("請輸入成績，要結束請輸入0:\n");
-
-    do{
-        printf("請輸入成績:");
-        scanf(" %d", &score[i]);
-
-    }while(score[i++]!=0);
-    num=i-1;
-    for(i=0;i<num;i++){
-        sum+=score[i];
-    }
-    printf("平均成績為:%.2f\n", (float)sum/num);
+    int A[SIZE]={5,3,6,1};
+    printf("陣列的內容為: ");
+    show(A);
 
 
     system("pause");
     return 0;
+}
+
+void show(int arr[]){
+    int i;
+    for(i=0;i<SIZE;i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
 }
